@@ -28,10 +28,3 @@ Please adhere to the following professional style description:
 2. Modern CSS: Utilize modern Layout Engines (CSS Grid and Flexbox), CSS Custom Properties (variables) for the color palette, and a mobile-first responsive approach.
 3. Performance & Accessibility (a11y): Ensure high contrast ratios, proper aria-attributes where needed, and fast-loading component structures.
 4. Clean Code: Code must be modular, well-commented in English, and easy to maintain or port into a framework later.
-
-### 📋 STEP-BY-STEP PROCESS
-
-1. Analyse and download all important assets and information into the "legacy" folder
-2. Create a directory structure for the new version in the folder "website"
-3. Create the new website, use vanilla HTML5/CSS3 and if possible no Javascript
-4. Make sure the new website uses important assets and information from the old website
