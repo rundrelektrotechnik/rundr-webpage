@@ -9,7 +9,8 @@
     "serve": "eleventy --serve",
     "start": "npm run build && concurrently -k \"npm:watch:css\" \"npm:serve\"",
     "assets": "node scripts/generate-assets.mjs",
-    "validate": "node scripts/validate-content.mjs"
+    "validate": "node scripts/validate-content.mjs",
+    "preview": "node scripts/build-preview.mjs"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,7 @@
   "type": "commonjs",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.7",
+    "adm-zip": "^0.6.1",
     "concurrently": "^10.0.6",
     "sharp": "^0.35.5",
     "tailwindcss": "^3.4.19"

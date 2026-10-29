@@ -71,7 +71,11 @@ npm install
 npm run validate   # nur Inhalte prüfen
 npm run build      # prüfen und Website nach _site bauen
 npm start          # bauen und lokal mit Live-Reload ansehen
+npm run preview    # ZIP für den Kunden: öffnet per Doppelklick, ohne Server und ohne Node.js
 ```
+
+Die Vorschau (`_preview/rr-website-vorschau-<Datum>.zip`) enthält relative Links und einen Hinweis-Banner und ist nur
+zum Verschicken gedacht. Veröffentlicht wird immer der normale Build (`npm run build`).
 
 Die Texte aus `content/*.yml` stehen in den Templates als `firma`, `startseite`, `leistungen` und `kontakt`
 zur Verfügung. Neue Pflichtfelder gehören zusätzlich in `scripts/validate-content.mjs`.
