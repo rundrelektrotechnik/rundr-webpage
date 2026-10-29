@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="font-sans text-slate-900 antialiased">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:text-slate-900 focus:shadow">Zum Inhalt springen</a>
+
+    {% include "partials/header.njk" %}
+
+    <main id="main">
+{{ content | safe }}
+    </main>
+
+    {% include "partials/footer.njk" %}
+
+    <script src="/js/menu.js" defer></script>
+</body>
+</html>

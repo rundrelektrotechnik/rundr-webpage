@@ -1,0 +1,22 @@
+{
+  "name": "rr-website",
+  "version": "1.0.0",
+  "description": "R&R Elektrotechnik GmbH website",
+  "scripts": {
+    "build:css": "tailwindcss -i src/css/input.css -o _site/css/style.css --minify",
+    "build": "eleventy && npm run build:css",
+    "watch:css": "tailwindcss -i src/css/input.css -o _site/css/style.css --watch",
+    "serve": "eleventy --serve",
+    "start": "npm run build && concurrently -k \"npm:watch:css\" \"npm:serve\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.7",
+    "concurrently": "^10.0.6",
+    "tailwindcss": "^3.4.19"
+  },
+  "private": true
+}
