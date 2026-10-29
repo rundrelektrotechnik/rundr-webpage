@@ -1,21 +1,128 @@
 ---
-title: "R&R Elektrotechnik GmbH – Elektrotechnik & Installation"
-description: "R&R Elektrotechnik GmbH – Meisterbetrieb für Elektrotechnik, Installation und Service."
+title: "R&R Elektrotechnik GmbH – Elektrotechnik & Installation in Erbach"
+description: "R&R Elektrotechnik GmbH aus Erbach: Beratung, Planung und Installation von Elektroanlagen, PV-Anlagen, Smart Home, SAT-Anlagen, Netzwerk und Glasfaser."
 ---
 <section id="hero" class="bg-slate-900 text-white">
     <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
         <div class="max-w-3xl">
             <h1 class="text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                Meisterbetrieb für Elektrotechnik &amp; Installation
+                Elektrotechnik &amp; Installation aus Erbach
             </h1>
             <p class="mt-4 text-lg leading-relaxed text-slate-200 sm:text-xl">
-                Zuverlässig, sicher und modern – Ihr Elektriker für die Region.
+                Von der Beratung über die Planung bis zur Installation – zuverlässig, sicher und modern.
             </p>
             <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
                 <a href="/kontakt.html" class="inline-flex items-center justify-center rounded-lg bg-amber-400 px-6 py-3 text-base font-semibold text-slate-900 shadow-sm transition-colors hover:bg-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
                     Jetzt anfragen
                 </a>
+                <a href="/leistungen.html" class="inline-flex items-center justify-center rounded-lg bg-blue-500 px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
+                    Unsere Leistungen
+                </a>
             </div>
+        </div>
+    </div>
+</section>
+
+{# Service teaser: image tiles that deep-link into the Leistungen page (data in _data/services.json) #}
+<section class="bg-slate-50" aria-labelledby="teaser-heading">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <h2 id="teaser-heading" class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">Das erledigen wir für Sie</h2>
+            <a href="/leistungen.html" class="text-sm font-semibold text-blue-600 hover:text-blue-700">Alle Leistungen im Detail <span aria-hidden="true">→</span></a>
+        </div>
+
+        <ul class="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+            {% for s in services %}
+            <li>
+                {# Decorative image (alt=""): the visible title already names the link target #}
+                <a href="/leistungen.html#{{ s.image }}" class="group relative block overflow-hidden rounded-xl bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2">
+                    <img src="/images/leistungen/{{ s.image }}.jpg" alt="" width="900" height="600" loading="lazy" decoding="async" class="aspect-[4/3] w-full object-cover transition duration-300 group-hover:scale-105">
+                    <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 to-transparent px-3 pb-3 pt-10 text-sm font-semibold text-white sm:text-base">{{ s.title }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+{# Draft wording – to be confirmed with the customer #}
+<section class="bg-white" aria-labelledby="warum-heading">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-3 lg:gap-16 lg:px-8">
+        <div>
+            <h2 id="warum-heading" class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">Warum R&amp;R Elektrotechnik?</h2>
+            <p class="mt-4 text-base leading-relaxed text-slate-600">
+                Ein Ansprechpartner für Ihr Projekt – verständlich beraten, sauber ausgeführt.
+            </p>
+        </div>
+
+        <dl class="grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:col-span-2">
+            <div class="flex gap-4">
+                <svg class="mt-1 h-6 w-6 flex-none text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                <div>
+                    <dt class="font-semibold text-slate-900">Alles aus einer Hand</dt>
+                    <dd class="mt-1 text-sm leading-relaxed text-slate-600">Beratung, Planung und Installation aus einem Betrieb – ohne Schnittstellenprobleme.</dd>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <svg class="mt-1 h-6 w-6 flex-none text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                <div>
+                    <dt class="font-semibold text-slate-900">Wohnen und Gewerbe</dt>
+                    <dd class="mt-1 text-sm leading-relaxed text-slate-600">Wir installieren im Neubau wie im Bestand, für Privathaushalte und Betriebe.</dd>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <svg class="mt-1 h-6 w-6 flex-none text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                <div>
+                    <dt class="font-semibold text-slate-900">Direkter Draht</dt>
+                    <dd class="mt-1 text-sm leading-relaxed text-slate-600">Sie sprechen direkt mit unseren Geschäftsführern, ohne Callcenter und Warteschleife.</dd>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <svg class="mt-1 h-6 w-6 flex-none text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                <div>
+                    <dt class="font-semibold text-slate-900">Aus der Region</dt>
+                    <dd class="mt-1 text-sm leading-relaxed text-slate-600">Unser Sitz ist in Erbach – wir sind für Kunden in der Umgebung schnell vor Ort.</dd>
+                </div>
+            </div>
+        </dl>
+    </div>
+</section>
+
+{# Contact people + call to action in one band (the Kontakt page holds the full details and the form) #}
+<section class="bg-slate-900 text-white" aria-labelledby="ansprechpartner-heading">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+            <div>
+                <h2 id="ansprechpartner-heading" class="text-2xl font-bold tracking-tight sm:text-3xl">Sprechen Sie uns direkt an</h2>
+                <p class="mt-4 max-w-lg text-base leading-relaxed text-slate-300">
+                    Sie planen ein Projekt oder haben eine Frage? Rufen Sie uns an oder schreiben Sie uns – wir melden uns schnellstmöglich bei Ihnen.
+                </p>
+                <p class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold">
+                    <a href="mailto:rundr.elektrotechnik@gmail.com" class="text-amber-300 hover:text-amber-200">rundr.elektrotechnik@gmail.com</a>
+                    <a href="/kontakt.html" class="text-white underline decoration-slate-500 underline-offset-4 hover:decoration-white">Zum Kontaktformular</a>
+                </p>
+            </div>
+
+            <ul class="space-y-3">
+                <li class="flex items-center justify-between gap-4 rounded-xl bg-slate-800 p-4">
+                    <div>
+                        <p class="font-semibold">Paul Rempel</p>
+                        <p class="text-sm text-slate-400">Geschäftsführer</p>
+                    </div>
+                    <a href="tel:+4915159829401" class="inline-flex items-center justify-center rounded-lg bg-amber-400 px-4 py-2.5 text-sm font-semibold text-slate-900 transition-colors hover:bg-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800">
+                        0151 598 294 01
+                    </a>
+                </li>
+                <li class="flex items-center justify-between gap-4 rounded-xl bg-slate-800 p-4">
+                    <div>
+                        <p class="font-semibold">Ivan Rempel</p>
+                        <p class="text-sm text-slate-400">Geschäftsführer</p>
+                    </div>
+                    <a href="tel:+491773608240" class="inline-flex items-center justify-center rounded-lg bg-amber-400 px-4 py-2.5 text-sm font-semibold text-slate-900 transition-colors hover:bg-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800">
+                        0177 360 82 40
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </section>

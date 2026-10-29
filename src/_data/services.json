@@ -1,0 +1,50 @@
+[
+  {
+    "image": "beratung",
+    "title": "Beratung",
+    "text": "Wir analysieren Ihren Bedarf und zeigen wirtschaftliche, sichere Lösungen für Neubau, Umbau und Bestand auf.",
+    "alt": "Gespräch bei einer Beratung: Hände gestikulieren vor einem Laptop auf dem Tisch"
+  },
+  {
+    "image": "planung",
+    "title": "Planung",
+    "text": "Normgerechte Planung Ihrer Elektro- und Kommunikationsanlagen – von der Skizze bis zur Ausführungsunterlage.",
+    "alt": "Technische Bauzeichnung eines Gebäudeschnitts auf blauem Plan"
+  },
+  {
+    "image": "pv-anlagen",
+    "title": "PV-Anlagen",
+    "text": "Installation und Anschluss von Photovoltaikanlagen und Speichern – von der Planung bis zur Inbetriebnahme.",
+    "alt": "Monteur setzt ein Solarmodul auf einem Hausdach ein"
+  },
+  {
+    "image": "elektro-installation",
+    "title": "Elektro-Installation",
+    "text": "Neuinstallation, Erweiterung und Modernisierung der Elektroanlage in Wohn- und Gewerbeobjekten.",
+    "alt": "Offener Schaltkasten mit Sicherungen und farbigen Leitungen"
+  },
+  {
+    "image": "smart-home",
+    "title": "Smart Home",
+    "text": "Intelligente Steuerung von Licht, Heizung und Rollläden für mehr Komfort und Energieeffizienz.",
+    "alt": "Smartes Thermostat an einer weißen Wand zeigt die Raumtemperatur an"
+  },
+  {
+    "image": "sat-anlagen",
+    "title": "SAT-Anlagen",
+    "text": "Montage, Ausrichtung und Wartung von Satellitenanlagen für störungsfreien Empfang.",
+    "alt": "Weiße Satellitenschüssel vor blauem Himmel"
+  },
+  {
+    "image": "netzwerk",
+    "title": "Netzwerk",
+    "text": "Strukturierte Verkabelung und Netzwerktechnik für Zuhause und Betrieb – stabil und zukunftssicher.",
+    "alt": "Netzwerk-Patchfeld mit angeschlossenen blauen Netzwerkkabeln"
+  },
+  {
+    "image": "glasfaser",
+    "title": "Glasfaser",
+    "text": "Verlegung und Anschluss von Glasfaser bis in die Wohnung für schnelles Internet.",
+    "alt": "Gelbe Glasfaserkabel mit grünen Steckern in einem Serverschrank"
+  }
+]
