@@ -1,5 +1,7 @@
 # Legacy Website Analysis
 
+> The full content captured from the live legacy site (company data, all four pages, privacy policy structure, images) is in [legacy.md](legacy.md). It supersedes the "Content Not Captured / Missing" list below for Kontakt, Datenschutz and Impressum.
+
 ## 1. Content Inventory
 
 ### Pages / URLs Present in Legacy Site
