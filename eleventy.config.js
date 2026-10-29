@@ -1,6 +1,10 @@
 module.exports = function (eleventyConfig) {
-  // Client-side scripts are copied as-is; CSS is built by the Tailwind CLI.
+  // Static assets are copied as-is; CSS is built by the Tailwind CLI.
   eleventyConfig.addPassthroughCopy('src/js');
+  eleventyConfig.addPassthroughCopy('src/images/**/*.{jpg,png}');
+  eleventyConfig.addPassthroughCopy('src/favicon.svg');
+  eleventyConfig.addPassthroughCopy('src/favicon-32.png');
+  eleventyConfig.addPassthroughCopy('src/apple-touch-icon.png');
   eleventyConfig.watchIgnores.add('_site/css/style.css');
 
   return {

@@ -7,7 +7,8 @@
     "build": "eleventy && npm run build:css",
     "watch:css": "tailwindcss -i src/css/input.css -o _site/css/style.css --watch",
     "serve": "eleventy --serve",
-    "start": "npm run build && concurrently -k \"npm:watch:css\" \"npm:serve\""
+    "start": "npm run build && concurrently -k \"npm:watch:css\" \"npm:serve\"",
+    "assets": "node scripts/generate-assets.mjs"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.1.7",
     "concurrently": "^10.0.6",
+    "sharp": "^0.35.5",
     "tailwindcss": "^3.4.19"
   },
   "private": true
