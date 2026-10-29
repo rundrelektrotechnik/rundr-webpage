@@ -1,6 +1,7 @@
 ---
-title: "Datenschutz – R&R Elektrotechnik GmbH"
-description: "Datenschutzerklärung der R&R Elektrotechnik GmbH, Erbach: welche Daten beim Besuch dieser Website und bei Kontaktaufnahme verarbeitet werden und welche Rechte Sie haben."
+eleventyComputed:
+  title: "Datenschutz – {{ firma.name | safe }}"
+  description: "Datenschutzerklärung der {{ firma.name | safe }}, {{ firma.ort | safe }}: welche Daten beim Besuch dieser Website und bei Kontaktaufnahme verarbeitet werden und welche Rechte Sie haben."
 ---
 <section class="bg-slate-900 text-white">
     <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
@@ -44,15 +45,15 @@ description: "Datenschutzerklärung der R&R Elektrotechnik GmbH, Erbach: welche 
                         <h2 class="text-xl font-semibold text-slate-900">1. Verantwortlicher</h2>
                         <p class="mt-4">Verantwortlich für die Datenverarbeitung auf dieser Website ist:</p>
                         <address class="mt-4 not-italic">
-                            R&amp;R Elektrotechnik GmbH<br>
-                            Lauerbacher Weg 19<br>
-                            64711 Erbach<br>
+                            {{ firma.name }}<br>
+                            {{ firma.strasse }}<br>
+                            {{ firma.plz }} {{ firma.ort }}<br>
                             Deutschland
                         </address>
                         <p class="mt-4">
-                            Vertretungsberechtigte Geschäftsführer: Paul Rempel, Ivan Rempel<br>
-                            Telefon: <a href="tel:+4915159829401" class="text-blue-600 hover:text-blue-700">0151 598 294 01</a> · <a href="tel:+491773608240" class="text-blue-600 hover:text-blue-700">0177 360 82 40</a><br>
-                            E-Mail: <a href="mailto:rundr.elektrotechnik@gmail.com" class="text-blue-600 hover:text-blue-700">rundr.elektrotechnik@gmail.com</a>
+                            Vertretungsberechtigte Geschäftsführer: {% for p in firma.ansprechpartner %}{{ p.name }}{% if not loop.last %}, {% endif %}{% endfor %}<br>
+                            Telefon: {% for p in firma.ansprechpartner %}<a href="tel:{{ p.telefon | tel }}" class="text-blue-600 hover:text-blue-700">{{ p.telefon }}</a>{% if not loop.last %} · {% endif %}{% endfor %}<br>
+                            E-Mail: <a href="mailto:{{ firma.email }}" class="text-blue-600 hover:text-blue-700">{{ firma.email }}</a>
                         </p>
                         <p class="mt-4">Weitere Angaben zum Unternehmen finden Sie im <a href="/impressum.html" class="text-blue-600 hover:text-blue-700">Impressum</a>.</p>
                     </section>

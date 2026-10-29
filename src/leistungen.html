@@ -1,12 +1,14 @@
 ---
-title: "Leistungen – R&R Elektrotechnik GmbH"
-description: "Leistungen der R&R Elektrotechnik GmbH: Beratung, Planung, PV-Anlagen, Elektro-Installation, Smart Home, SAT-Anlagen, Netzwerk und Glasfaser."
+eleventyComputed:
+  title: "{{ leistungen.seo.titel | safe }}"
+  description: "{{ leistungen.seo.beschreibung | safe }}"
 ---
+{# All texts come from content/leistungen.yml #}
 <section class="bg-slate-900 text-white">
     <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
-        <h1 class="text-3xl font-bold tracking-tight sm:text-5xl">Unsere Leistungen</h1>
+        <h1 class="text-3xl font-bold tracking-tight sm:text-5xl">{{ leistungen.titel }}</h1>
         <p class="mt-4 max-w-2xl text-lg leading-relaxed text-slate-200">
-            Von der Beratung über die Planung bis zur Installation – sauber geplant, normgerecht ausgeführt und zuverlässig betreut.
+            {{ leistungen.einleitung }}
         </p>
     </div>
 </section>
@@ -15,12 +17,12 @@ description: "Leistungen der R&R Elektrotechnik GmbH: Beratung, Planung, PV-Anla
     <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <h2 id="leistungen-heading" class="sr-only">Übersicht der Leistungen</h2>
         <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {% for s in services %}
-            <li id="{{ s.image }}" class="scroll-mt-24">
+            {% for s in leistungen.leistungen %}
+            <li id="{{ s.bild }}" class="scroll-mt-24">
                 <article class="h-full overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-                    <img src="/images/leistungen/{{ s.image }}.jpg" alt="{{ s.alt }}" width="900" height="600" loading="lazy" decoding="async" class="aspect-[3/2] w-full object-cover">
+                    <img src="/images/leistungen/{{ s.bild }}.jpg" alt="{{ s.alt }}" width="900" height="600" loading="lazy" decoding="async" class="aspect-[3/2] w-full object-cover">
                     <div class="p-6">
-                        <h3 class="text-lg font-semibold text-slate-900">{{ s.title }}</h3>
+                        <h3 class="text-lg font-semibold text-slate-900">{{ s.titel }}</h3>
                         <p class="mt-2 text-sm leading-relaxed text-slate-600">{{ s.text }}</p>
                     </div>
                 </article>
@@ -33,11 +35,11 @@ description: "Leistungen der R&R Elektrotechnik GmbH: Beratung, Planung, PV-Anla
 <section class="bg-slate-900 text-white">
     <div class="mx-auto flex max-w-7xl flex-col items-start gap-6 px-4 py-12 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
         <div>
-            <h2 class="text-2xl font-bold">Haben Sie ein Projekt?</h2>
-            <p class="mt-2 text-slate-300">Sprechen Sie uns an – wir beraten Sie unverbindlich.</p>
+            <h2 class="text-2xl font-bold">{{ leistungen.abschluss.titel }}</h2>
+            <p class="mt-2 text-slate-300">{{ leistungen.abschluss.text }}</p>
         </div>
         <a href="/kontakt.html" class="inline-flex items-center justify-center rounded-lg bg-amber-400 px-6 py-3 text-base font-semibold text-slate-900 shadow-sm transition-colors hover:bg-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
-            Kontakt aufnehmen
+            {{ leistungen.abschluss.button }}
         </a>
     </div>
 </section>

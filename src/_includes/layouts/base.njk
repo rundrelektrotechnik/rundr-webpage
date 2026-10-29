@@ -18,7 +18,7 @@
 
     {# Open Graph / Twitter: previews for shared links #}
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:site_name" content="{{ firma.name }}">
     <meta property="og:locale" content="{{ site.locale }}">
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ description }}">
@@ -40,16 +40,16 @@
     {
         "@context": "https://schema.org",
         "@type": "Electrician",
-        "name": "{{ site.name | safe }}",
+        "name": "{{ firma.name | safe }}",
         "url": "{{ site.url }}/",
         "image": "{{ site.url }}{{ site.ogImage }}",
-        "telephone": "{{ site.phone }}",
-        "email": "{{ site.email }}",
+        "telephone": "{{ firma.ansprechpartner[0].telefon | tel }}",
+        "email": "{{ firma.email }}",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "{{ site.street }}",
-            "postalCode": "{{ site.postalCode }}",
-            "addressLocality": "{{ site.city }}",
+            "streetAddress": "{{ firma.strasse | safe }}",
+            "postalCode": "{{ firma.plz }}",
+            "addressLocality": "{{ firma.ort | safe }}",
             "addressRegion": "{{ site.region }}",
             "addressCountry": "{{ site.country }}"
         }

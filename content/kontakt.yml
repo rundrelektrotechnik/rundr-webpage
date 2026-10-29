@@ -1,0 +1,22 @@
+# ============================================================
+# Kontaktseite
+# Anschrift, Telefonnummern und E-Mail kommen aus firma.yml.
+# Texte immer in "Anführungszeichen" schreiben.
+# Einrückungen (Leerzeichen am Zeilenanfang) nicht ändern.
+# ============================================================
+
+seo:
+  titel: "Kontakt – R&R Elektrotechnik GmbH"
+  beschreibung: "Kontakt zur R&R Elektrotechnik GmbH in Erbach: Rufen Sie Paul oder Ivan Rempel an oder schreiben Sie uns eine E-Mail."
+
+titel: "Kontakt"
+einleitung: "Sie haben ein Projekt oder eine Frage? Rufen Sie uns an oder schreiben Sie uns – wir melden uns schnellstmöglich bei Ihnen."
+
+ablauf_titel: "So geht es weiter"
+schritte:
+  - titel: "Anfrage"
+    text: "Sie rufen an oder schreiben uns und schildern kurz Ihr Anliegen."
+  - titel: "Beratung"
+    text: "Wir besprechen die Möglichkeiten und klären Details, bei Bedarf vor Ort."
+  - titel: "Angebot & Umsetzung"
+    text: "Sie erhalten ein klares Angebot, danach planen und führen wir die Arbeiten aus."

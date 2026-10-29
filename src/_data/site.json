@@ -1,12 +1,6 @@
 {
-  "name": "R&R Elektrotechnik GmbH",
   "url": "https://www.r-r.gmbh",
   "locale": "de_DE",
-  "phone": "+4915159829401",
-  "email": "rundr.elektrotechnik@gmail.com",
-  "street": "Lauerbacher Weg 19",
-  "postalCode": "64711",
-  "city": "Erbach",
   "region": "Hessen",
   "country": "DE",
   "themeColor": "#0f172a",

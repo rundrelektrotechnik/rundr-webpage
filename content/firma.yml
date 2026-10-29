@@ -1,0 +1,41 @@
+# ============================================================
+# Firmendaten
+# Diese Angaben erscheinen automatisch auf der ganzen Website:
+# Kopfzeile, Fußzeile, Kontaktseite, Impressum, Datenschutz.
+#
+# Regeln: Texte immer in "Anführungszeichen" schreiben.
+# Einrückungen (Leerzeichen am Zeilenanfang) nicht ändern.
+# ============================================================
+
+name: "R&R Elektrotechnik GmbH"
+kurzbeschreibung: "Elektrotechnik & Installation. Zuverlässig, sicher und modern – Ihr Elektriker für die Region."
+
+# Anschrift
+strasse: "Lauerbacher Weg 19"
+plz: "64711"
+ort: "Erbach"
+
+# Allgemeine E-Mail-Adresse
+email: "rundr.elektrotechnik@gmail.com"
+
+# Ansprechpartner (Geschäftsführer). Jeder Eintrag beginnt mit einem Strich.
+# Neue Person: Block kopieren und darunter einfügen.
+ansprechpartner:
+  - name: "Paul Rempel"
+    rolle: "Geschäftsführer"
+    telefon: "0151 598 294 01"
+  - name: "Ivan Rempel"
+    rolle: "Geschäftsführer"
+    telefon: "0177 360 82 40"
+
+# Angaben für das Impressum
+register_gericht: "Amtsgericht Darmstadt"
+register_nummer: "HRB 103111"
+ust_id: "DE350732918"
+inhaltlich_verantwortlich: "Ivan Rempel"
+
+# Optional: leer lassen ("") = wird nicht angezeigt.
+# Beispiel Einsatzgebiet: "Odenwaldkreis und Umgebung"
+einsatzgebiet: ""
+# Beispiel Erreichbarkeit: "Mo–Fr 8:00–17:00 Uhr"
+oeffnungszeiten: ""

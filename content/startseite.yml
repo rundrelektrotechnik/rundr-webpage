@@ -1,0 +1,42 @@
+# ============================================================
+# Startseite
+# Texte immer in "Anführungszeichen" schreiben.
+# Einrückungen (Leerzeichen am Zeilenanfang) nicht ändern.
+# ============================================================
+
+# Titel und Beschreibung in Google und beim Teilen eines Links
+seo:
+  titel: "R&R Elektrotechnik GmbH – Elektrotechnik & Installation in Erbach"
+  beschreibung: "R&R Elektrotechnik GmbH aus Erbach: Beratung, Planung und Installation von Elektroanlagen, PV-Anlagen, Smart Home, SAT-Anlagen, Netzwerk und Glasfaser."
+
+# Großer Bereich ganz oben
+hero:
+  titel: "Elektrotechnik & Installation aus Erbach"
+  untertitel: "Von der Beratung über die Planung bis zur Installation – zuverlässig, sicher und modern."
+  button_anfragen: "Jetzt anfragen"
+  button_leistungen: "Unsere Leistungen"
+
+# Bildkacheln mit den Leistungen (die Leistungen selbst stehen in leistungen.yml)
+leistungen_teaser:
+  titel: "Das erledigen wir für Sie"
+  link: "Alle Leistungen im Detail"
+
+# Bereich "Warum wir?"
+warum:
+  titel: "Warum R&R Elektrotechnik?"
+  einleitung: "Ein Ansprechpartner für Ihr Projekt – verständlich beraten, sauber ausgeführt."
+  punkte:
+    - titel: "Alles aus einer Hand"
+      text: "Beratung, Planung und Installation aus einem Betrieb – ohne Schnittstellenprobleme."
+    - titel: "Wohnen und Gewerbe"
+      text: "Wir installieren im Neubau wie im Bestand, für Privathaushalte und Betriebe."
+    - titel: "Direkter Draht"
+      text: "Sie sprechen direkt mit unseren Geschäftsführern, ohne Callcenter und Warteschleife."
+    - titel: "Aus der Region"
+      text: "Unser Sitz ist in Erbach – wir sind für Kunden in der Umgebung schnell vor Ort."
+
+# Dunkler Bereich unten mit Telefonnummern (die Nummern kommen aus firma.yml)
+kontakt_band:
+  titel: "Sprechen Sie uns direkt an"
+  text: "Sie planen ein Projekt oder haben eine Frage? Rufen Sie uns an oder schreiben Sie uns – wir melden uns schnellstmöglich bei Ihnen."
+  link_formular: "Zum Kontaktformular"

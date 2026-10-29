@@ -1,0 +1,57 @@
+# Builds the website on every change and publishes it when the change is on main.
+#
+# 1. "npm run build" first checks the customer-editable files in /content
+#    (npm run validate). If something is wrong, the build stops here with a
+#    plain-German message and the live website stays unchanged.
+# 2. On pushes to main the finished site (_site) is deployed.
+#
+# The deploy job below uses GitHub Pages. If the site is hosted elsewhere,
+# replace only the "deploy" job; the "build" job stays the same.
+name: Website veröffentlichen
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: website
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Inhalte prüfen und Website bauen
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: Veröffentlichen
+    needs: build
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
