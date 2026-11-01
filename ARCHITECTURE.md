@@ -12,7 +12,7 @@ npm start            # validate + build, then serve at localhost:8080 with live 
 npm run build        # validate + build to _site/ (what CI deploys)
 npm run validate     # only check content/*.yml (plain-German errors)
 npm run preview      # offline ZIP for the customer: _preview/rr-website-vorschau-<date>.zip
-npm run assets       # regenerate favicon PNGs + Open Graph image from src/favicon.svg
+npm run assets       # regenerate favicon PNGs + Open Graph image from src/favicon.svg + src/logo.svg
 ```
 
 Node 22 in CI (local: any current Node). Open `_site/index.html` directly will look broken (root-absolute paths) – use `npm start` or `npm run preview`.
@@ -38,7 +38,7 @@ src/                     Eleventy input
   404.html               Not-found page (noindex)
   sitemap.njk, robots.njk  Generated /sitemap.xml and /robots.txt
   css/input.css          Tailwind entry; js/menu.js (mobile menu), js/contact.js (mailto form)
-  favicon.svg, favicon-32.png, apple-touch-icon.png, images/og-image.png   Brand assets
+  logo.svg (traced from the customer logo), favicon.svg, favicon-32.png, apple-touch-icon.png, images/og-image.png   Brand assets
 scripts/
   load-content.js        Loads/parses content/*.yml (shared by build and validator)
   validate-content.mjs   Required fields, formats, photo existence, alt texts; German messages;
