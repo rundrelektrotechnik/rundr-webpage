@@ -43,10 +43,6 @@ eleventyComputed:
                         {{ firma.strasse }}<br>
                         {{ firma.plz }} {{ firma.ort }}
                     </address>
-                    {# Plain link instead of an embedded map: no third-party requests, no consent banner needed #}
-                    <a href="https://www.openstreetmap.org/search?query={{ (firma.strasse + ', ' + firma.plz + ' ' + firma.ort) | urlencode }}" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-sm font-medium text-blue-600 hover:text-blue-700">
-                        Auf der Karte anzeigen (OpenStreetMap) <span aria-hidden="true">↗</span>
-                    </a>
                     <p class="mt-4 border-t border-slate-200 pt-4 text-xs leading-relaxed text-slate-500">
                         {{ firma.register_gericht }}, {{ firma.register_nummer }}<br>
                         USt-ID: {{ firma.ust_id }}

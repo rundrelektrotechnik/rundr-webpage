@@ -90,7 +90,7 @@ added and everything is zipped (adm-zip). **Never used for deployment.** Normal 
   Avoid duplicating the same visual block across pages (home teaser = image tiles, Leistungen = full cards,
   Kontakt = contact cards).
 - Internal links are root-absolute (`/leistungen.html`); service cards have ids (`/leistungen.html#<photo-name>`).
-- No cookies, no analytics, no third-party requests (no CDN, fonts, embedded maps). Map = plain OpenStreetMap link.
+- No cookies, no analytics, no third-party requests (no CDN, fonts, embedded maps, map links).
   If any tracker/embed is added, update `src/datenschutz.html` and consider consent handling.
 - Contact form = `mailto:` builder (`js/contact.js`); nothing is sent through the site. Privacy text matches this.
 - Decorative home-page tile images use `alt=""`; Leistungen images carry German alt texts (required by the validator).
