@@ -122,7 +122,7 @@ now on the Leistungen page). All company data was carried over into `content/fir
 
 ## Open items / to confirm with the customer
 
-- Hosting provider is Squarespace (named in `datenschutz.html`, section 3); if the CI `deploy` job still targets GitHub Pages, adjust it. Datenschutz states the mailbox is Google (Gmail) – confirm.
+- Hosted on GitHub Pages (named in `datenschutz.html`, section 3; custom domain `www.r-r.gmbh`, DNS at Squarespace: CNAME `www` → `rundrelektrotechnik.github.io`, four A records for the apex, TXT for domain verification). If the host changes, update that section. Datenschutz states the mailbox is Google (Gmail) – confirm.
 - Legal pages (Impressum, Datenschutz) are drafts: have a lawyer or generator review them before launch.
 - Draft marketing copy to approve: "Warum R&R" points, service descriptions, Kontakt process steps.
 - Missing content (do not invent): customer reviews/ratings, reference projects, service area, opening hours, certifications, founding year.
