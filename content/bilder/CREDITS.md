@@ -11,6 +11,7 @@ here for reference). Resized to 900x600 JPEG.
 | pv-anlagen.jpg | Bill Mead | photo-1624397640148-949b1732bb0a |
 | elektro-installation.jpg | Markus Spiske | photo-1544724569-5f546fd6f2b5 |
 | netzwerk.jpg | Jordan Harrison | photo-1544197150-b99a580bb7a8 |
+| wallboxen.jpg | dcbel | photo-1766507680004-1c71007aefe5 |
 
-smart-home.jpg and wallboxen.jpg are original illustrations drawn by `scripts/generate-service-images.mjs`
-(no third-party material; the KNX and Loxone names are trademarks of their owners).
+smart-home.jpg is an original illustration drawn by `scripts/generate-service-images.mjs`
+(the KNX and Loxone names are trademarks of their owners).

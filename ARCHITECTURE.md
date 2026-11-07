@@ -25,7 +25,7 @@ content/                 Customer-editable data (see "Content model")
   startseite.yml         Home page texts
   leistungen.yml         Intro + the 7 services (title, text, photo name, alt text)
   kontakt.yml            Contact page texts + 3 process steps
-  bilder/                Source images for the services (+ CREDITS.md; Unsplash photos, smart-home/wallboxen are illustrations from scripts/generate-service-images.mjs)
+  bilder/                Source images for the services (+ CREDITS.md; Unsplash photos, smart-home is an illustration from scripts/generate-service-images.mjs)
   ANLEITUNG.md           German guide for the customer (how to edit, what errors mean)
 src/                     Eleventy input
   _includes/layouts/base.njk      <head> (SEO, Open Graph, JSON-LD), skip link, header, main, footer, scripts

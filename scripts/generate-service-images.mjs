@@ -1,4 +1,4 @@
-// Draws the illustrated service pictures (smart-home, wallboxen) into content/bilder/.
+// Draws the illustrated service pictures (smart-home) into content/bilder/.
 // Run with `node scripts/generate-service-images.mjs`; the generated PNGs are committed.
 import { rm, writeFile } from 'node:fs/promises';
 import sharp from 'sharp';
@@ -50,47 +50,7 @@ const smart = `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" 
   <text x="450" y="52" text-anchor="middle" fill="#f8fafc" font-size="30" font-weight="600" ${font}>Smart Home – alles vernetzt</text>
 </svg>`;
 
-// ---------- Wallbox: wall box charging an electric car ----------
-const wall = `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">${defs}
-  <rect width="900" height="600" fill="url(#bg)"/>
-  <!-- house wall + ground -->
-  <rect x="0" y="0" width="300" height="470" fill="#334155"/>
-  <g stroke="#1e293b" stroke-width="2" opacity=".6">
-    ${[60, 120, 180, 240, 300, 360, 420].map((y) => `<path d="M0 ${y}H300"/>`).join('')}
-  </g>
-  <rect x="0" y="470" width="900" height="130" fill="#0b1220"/>
-  <rect x="0" y="470" width="900" height="6" fill="#475569"/>
-  <!-- wallbox -->
-  <g transform="translate(190 170)">
-    <rect x="-52" y="-80" width="104" height="170" rx="22" fill="#f8fafc"/>
-    <rect x="-40" y="-68" width="80" height="146" rx="16" fill="#e2e8f0"/>
-    <circle cx="0" cy="-32" r="14" fill="#22c55e"/>
-    <circle cx="0" cy="-32" r="24" fill="none" stroke="#22c55e" stroke-width="4" opacity=".5"/>
-    <rect x="-22" y="6" width="44" height="30" rx="6" fill="#0f172a"/>
-    <path d="M3 10l-9 14h7l-3 10 10-15h-7z" fill="#fb923c"/>
-    <circle cx="0" cy="62" r="9" fill="#475569"/>
-  </g>
-  <!-- cable -->
-  <path d="M190 232 C 190 330, 260 310, 330 335 S 380 385, 420 372" fill="none" stroke="#111827" stroke-width="14" stroke-linecap="round"/>
-  <path d="M190 232 C 190 330, 260 310, 330 335 S 380 385, 420 372" fill="none" stroke="#fb923c" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 14"/>
-  <!-- car -->
-  <g transform="translate(390 0)">
-    <path d="M20 440 V390 C20 370 40 360 70 355 L150 300 C170 285 200 278 240 278 H320 C350 278 372 292 392 318 L420 350 C 450 358 470 372 470 400 V440 Z" fill="#fb923c"/>
-    <path d="M165 312 L120 352 H235 V298 H200 C185 298 175 304 165 312Z M255 298 V352 H375 L350 318 C340 305 328 298 312 298Z" fill="#0f172a" opacity=".85"/>
-    <rect x="22" y="378" width="30" height="14" rx="5" fill="#fde68a"/>
-    <circle cx="105" cy="440" r="42" fill="#0b1220"/><circle cx="105" cy="440" r="22" fill="#94a3b8"/>
-    <circle cx="385" cy="440" r="42" fill="#0b1220"/><circle cx="385" cy="440" r="22" fill="#94a3b8"/>
-    <rect x="30" y="360" width="22" height="22" rx="4" fill="#22c55e"/>
-  </g>
-  <!-- lightning badge -->
-  <g transform="translate(740 110)">
-    <circle r="56" fill="#0f172a" stroke="#fb923c" stroke-width="4"/>
-    <path d="M8-34L-18 4h18l-8 30 28-42H2z" fill="#fb923c"/>
-  </g>
-  <text x="450" y="556" text-anchor="middle" fill="#f8fafc" font-size="30" font-weight="600" ${font}>Wallbox – Laden zu Hause</text>
-</svg>`;
-
-for (const [name, svg] of [['smart-home', smart], ['wallboxen', wall]]) {
+for (const [name, svg] of [['smart-home', smart]]) {
   await rm(`content/bilder/${name}.jpg`, { force: true }); // overwriting in place fails on this Windows setup
   await writeFile(`content/bilder/${name}.jpg`, await sharp(Buffer.from(svg)).jpeg({ quality: 90 }).toBuffer());
 }
