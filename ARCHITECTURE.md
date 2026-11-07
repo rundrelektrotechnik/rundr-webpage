@@ -23,9 +23,9 @@ Node 22 in CI (local: any current Node). Open `_site/index.html` directly will l
 content/                 Customer-editable data (see "Content model")
   firma.yml              Company data: name, address, phones, e-mail, register, USt-ID
   startseite.yml         Home page texts
-  leistungen.yml         Intro + the 8 services (title, text, photo name, alt text)
+  leistungen.yml         Intro + the 7 services (title, text, photo name, alt text)
   kontakt.yml            Contact page texts + 3 process steps
-  bilder/                Source photos for the services (+ CREDITS.md, Unsplash)
+  bilder/                Source images for the services (+ CREDITS.md; Unsplash photos, smart-home/wallboxen are illustrations from scripts/generate-service-images.mjs)
   ANLEITUNG.md           German guide for the customer (how to edit, what errors mean)
 src/                     Eleventy input
   _includes/layouts/base.njk      <head> (SEO, Open Graph, JSON-LD), skip link, header, main, footer, scripts
@@ -38,7 +38,7 @@ src/                     Eleventy input
   404.html               Not-found page (noindex)
   sitemap.njk, robots.njk  Generated /sitemap.xml and /robots.txt
   css/input.css          Tailwind entry; js/menu.js (mobile menu), js/contact.js (mailto form)
-  logo.svg (traced from the customer logo), favicon.svg, favicon-32.png, apple-touch-icon.png, images/og-image.png   Brand assets
+  logo.svg (traced from the customer logo; used for the share image), logo-mark.svg (only the "R&R" mark, used in the header next to the text "Elektrotechnik GmbH"), favicon.svg, favicon-32.png, apple-touch-icon.png, images/og-image.png   Brand assets
 scripts/
   load-content.js        Loads/parses content/*.yml (shared by build and validator)
   validate-content.mjs   Required fields, formats, photo existence, alt texts; German messages;
@@ -122,7 +122,7 @@ now on the Leistungen page). All company data was carried over into `content/fir
 
 ## Open items / to confirm with the customer
 
-- Hosting provider is not named in `datenschutz.html` (hidden TODO comment in section 3); Datenschutz states the mailbox is Google (Gmail) – confirm.
+- Hosting provider is Squarespace (named in `datenschutz.html`, section 3); if the CI `deploy` job still targets GitHub Pages, adjust it. Datenschutz states the mailbox is Google (Gmail) – confirm.
 - Legal pages (Impressum, Datenschutz) are drafts: have a lawyer or generator review them before launch.
 - Draft marketing copy to approve: "Warum R&R" points, service descriptions, Kontakt process steps.
 - Missing content (do not invent): customer reviews/ratings, reference projects, service area, opening hours, certifications, founding year.

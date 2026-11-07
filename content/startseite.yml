@@ -7,7 +7,7 @@
 # Titel und Beschreibung in Google und beim Teilen eines Links
 seo:
   titel: "R&R Elektrotechnik GmbH – Elektrotechnik & Installation in Erbach"
-  beschreibung: "R&R Elektrotechnik GmbH aus Erbach: Beratung, Planung und Installation von Elektroanlagen, PV-Anlagen, Smart Home, SAT-Anlagen, Netzwerk und Glasfaser."
+  beschreibung: "R&R Elektrotechnik GmbH aus Erbach: Beratung, Planung und Installation von Elektroanlagen, PV-Anlagen, Smart Home, Wallboxen und Netzwerk."
 
 # Großer Bereich ganz oben
 hero:
@@ -29,7 +29,7 @@ warum:
     - titel: "Alles aus einer Hand"
       text: "Beratung, Planung und Installation aus einem Betrieb – ohne Schnittstellenprobleme."
     - titel: "Wohnen und Gewerbe"
-      text: "Wir installieren im Neubau wie im Bestand, für Privathaushalte und Betriebe."
+      text: "Wir installieren im Neubau wie im Bestand, für Privathaushalte und Gewerbe."
     - titel: "Direkter Draht"
       text: "Sie sprechen direkt mit unseren Geschäftsführern, ohne Callcenter und Warteschleife."
     - titel: "Aus der Region"

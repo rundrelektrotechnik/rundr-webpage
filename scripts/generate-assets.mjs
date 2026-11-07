@@ -24,7 +24,7 @@ const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" vi
   <g transform="translate(220 75) scale(.7) translate(-310 -90)">${logo}</g>
   <g font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" fill="#cbd5e1" font-size="34">
     <text x="600" y="425">Elektroinstallation · PV-Anlagen</text>
-    <text x="600" y="475">Smart Home · Netzwerk · Glasfaser</text>
+    <text x="600" y="475">Smart Home · Wallboxen · Netzwerk</text>
     <text x="600" y="555" font-size="30" font-weight="600" fill="#f97316">Erbach · Hessen</text>
   </g>
 </svg>`;

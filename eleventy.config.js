@@ -42,6 +42,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/images/og-image.png');
   eleventyConfig.addPassthroughCopy('src/favicon.svg');
   eleventyConfig.addPassthroughCopy('src/logo.svg');
+  eleventyConfig.addPassthroughCopy('src/logo-mark.svg');
   eleventyConfig.addPassthroughCopy('src/favicon-32.png');
   eleventyConfig.addPassthroughCopy('src/apple-touch-icon.png');
   eleventyConfig.watchIgnores.add(OUTPUT_DIR + '/css/style.css');
